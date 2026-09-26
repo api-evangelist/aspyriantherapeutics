@@ -1,23 +1,70 @@
 aid: aspyriantherapeutics
+
 name: Aspyriantherapeutics
-description: 'Aspyriantherapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://rakuten-med.com/us/wp-content/uploads/sites/6/2021/02/RakutenMedical_KV.png
+
+description: 'Aspyriantherapeutics, now operating as Rakuten Medical, is a privately funded clinical‑stage biotechnology company based in San Diego, United States. Founded in 2010, it develops precision, cell‑targeting photoimmunotherapy based on its proprietary Alluminox® platform to treat solid tumours, particularly head and neck cancers. The company has raised significant funding and is advancing its pipeline through clinical trials and expanded access programs.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aspyriantherapeutics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Photoimmunotherapy
+- Clinical-stage
+- Oncology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/aspyriantherapeutics-well-known.yml
+- type: Hosts
+  url: hosts/aspyriantherapeutics-hosts.yml
+- type: Vendors
+  url: vendors/aspyriantherapeutics-vendors.yml
+- type: PrivacyPolicy
+  url: https://rakuten-med.com/us/privacy-policy/
+- type: Newsroom
+  url: https://rakuten-med.com/us/news
+- type: Leadership
+  url: https://rakuten-med.com/us/about/leadership
+- type: DomainSecurity
+  url: security/aspyriantherapeutics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aspyriantherapeutics
+  url: https://rakuten-med.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found at the provider's API hosts.
+  evidence:
+    - url: https://api.rakuten-med.com/openapi.json
+      status: dns_error
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
